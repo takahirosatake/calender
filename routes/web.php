@@ -21,6 +21,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/calendars', 'CalendarController@getAllEvent');
+Route::post('/create', 'CalendarController@createEvent');
+Route::post('/delete', 'CalendarController@deleteEvent');
